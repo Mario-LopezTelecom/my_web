@@ -1,15 +1,15 @@
 const lost = require('lost')
 const pxtorem = require('postcss-pxtorem')
 
-const url = 'https://lumen.netlify.com'
+const url = 'https://drmario.netlify.com'
 
 module.exports = {
   siteMetadata: {
     url,
     siteUrl: url,
-    title: 'Blog by John Doe',
+    title: 'Dr Mario Blog. A Full Stack Persona',
     subtitle:
-      'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+      'Current obsessions: Tech team management & Data Engineering. This may change.',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
@@ -22,18 +22,17 @@ module.exports = {
         path: '/about/',
       },
       {
-        label: 'Contact me',
-        path: '/contact/',
+        label: 'Stuff I made I am proud of',
+        path: '/stuff/',
       },
     ],
     author: {
-      name: 'John Doe',
-      email: '#',
-      telegram: '#',
-      twitter: '#',
+      name: 'Dr. Mario',
+      email: 'mario.lopezmartinez87@gmail.com',
+      linkedin: 'mariolopezmartinez',
+      twitter: '',
       github: '#',
       rss: '#',
-      vk: '#',
     },
   },
   plugins: [
