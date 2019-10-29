@@ -22,7 +22,7 @@ module.exports = {
         path: '/about/',
       },
       {
-        label: 'Stuff I made I am proud of',
+        label: 'Stuff I made',
         path: '/stuff/',
       },
     ],
@@ -30,7 +30,7 @@ module.exports = {
       name: 'Dr. Mario',
       email: 'mario.lopezmartinez87@gmail.com',
       linkedin: 'mariolopezmartinez',
-      twitter: '',
+      twitter: 'drmario-gh',
       github: '#',
       rss: '#',
     },
