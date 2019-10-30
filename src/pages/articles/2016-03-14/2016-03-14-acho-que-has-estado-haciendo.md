@@ -1,21 +1,21 @@
 ---
+title: "Acho, ¿lo de doctor Mario...?"
 layout: post
-title: Acho, ¿qué has estado haciendo estos últimos tres años?
-image: 2016-03-14/traffic.png
+date: "2017-08-18T22:12:03.284Z"
+draft: false
+path: "/posts/acho-lo-de-doctor-mario"
+category: "Meta"
+tags:
+  - "Reserach"
+description: "Como se habrá enterado hasta mi (esquizofrénica, esquizofrénica, esquizofrénica) vecina de abajo, AL FIN he depositado la tesis."
 ---
-
-*Nota: este post lo publiqué originalmente en Medium, el 19/03/2015. No podía comenzar este blog de otra manera.*
-
-Como se habrá enterado hasta mi (esquizofrénica, esquizofrénica, esquizofrénica) vecina de abajo, AL FIN he depositado la tesis. 
-
-<!--more-->
 
 Empecé a escribir este post mientras escribía las conclusiones. Ese es un momento muy <a href="https://www.youtube.com/watch?v=HrkfXWPk_vo">Homer Simpson mezclando estimulantes y somníferos</a>: por un lado estás en el punto más bajonero posible por el cansancio, y por otro, es un parraque máximo porque ahí va lo verdaderamente valioso de tu tesis. Te toca mojarte y dejar algo de tí, de la intuición que tienes después de estar batiéndote el cobre con la literatura y la matemática del tema.
 
 El caso es que me daba muchísima pena porque ahí no podía poner algo que me hubiera encantado leer en las tesis de los demás: *pero zagalico, ¿por qué has hecho esta paranoia? ¿Con qué te has quedado por el camino? ¿Estás contentico?* (feat. @Sirocoma).
 
 ### Llámame Doctor Mario porque…
-![]({{ site.baseurl }}pics/2016-03-14/traffic.png)
+![](./traffic.png)
 <div class="my-caption"> Subfigura A. El tráfico wireless que generábamos con el Teletrébol de Telecinco. Subfigura B. Tráfico generado por una reunión de amiguis cualquiera con Instagram. </div>
 
 …he hecho cosicas para que podamos ver vídeos de perretes más rápido cuando estamos fuera de casa. El título de mi tesis es “Coexistence Policies in Cognitive Radio” (¿te la quieres leer? <a href="https://www.dropbox.com/s/wrdpo1sh37kwldg/MLopez_thesis.pdf?dl=0">HERE</a>). Resumen rápido: imaginad que las comunicaciones inalámbricas son vehículos en una autopista, con carriles reservados para cada servicio: uno para taxis (en la analogía, por ejemplo, televisión), otro para <a href="http://www.circulaseguro.com/que-es-un-carril-vao/" rel="nofollow" data-href="http://www.circulaseguro.com/que-es-un-carril-vao/">Vehículos de Alta Ocupación (VAO)</a> (e.g. móviles), etc. Al principio viajaba poca gente, con lo que había carriles de autopista de sobra (Subfigura A). Pero en esta equivalencia, Youtube en el móvil sería un camión que necesita 3 carriles pa’ el sólo (Subfigura B). No podemos reservar tantos carriles porque la autopista no tiene tantos. Además, algunos de estos carriles se siguen usando de uvas a peras, pero se usan. ¿Por qué no dejar al camionazo-youtube que vaya cambiando de carriles (y/o a los demás vehículos), colocándose en los que pueda, siempre que estén libres, sin chocar con los vehículos reservados para cada carril? Pero claro, no íbamos a estar nosotros conduciendo el camión manualmente (imaginaos tener que ir cambiando un dial de radio para ir recibiendo los datos, según nos vamos moviendo). Yo he investigado qué mecanismos pueden usarse para que el camión circule sin chocar por esa carretera, sin conductor, de manera inteligente.
