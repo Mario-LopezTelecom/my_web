@@ -3,6 +3,7 @@ layout: post
 title: Nutch, HDFS, and Elasticsearch on AWS t2.micro instances (Free Tier)
 image: 2016-06-26/system_diagram.png
 date: "2016-06-26T20:00:01.244Z"
+slug: "nutch-hdfs-elasticsearch-on-t2micro"
 category: "Data Eng."
 description: 'As an exercise I committed to see how much I could accomplish of the following task definition: "Configure an HTTP crawler on Amazon AWS (Free Tier) with high performance and index a couple of websites."'
 tags:
@@ -12,16 +13,16 @@ draft: false
 
 As an exercise I committed to see how much I could accomplish of the following task definition: 
 
-> Configure an HTTP crawler on Amazon AWS (Free Tier) with high performance and index a couple of websites.
->
-> +  Use Nutch as crawler.
-> +  Configure it to use several machines simultaneously for crawling.
-> +  Configure HDFS as filesystem. 
-> +  Use ElasticSearch for storage and indexing.
+*Configure an HTTP crawler on Amazon AWS (Free Tier) with high performance and index a couple of websites.*
+
+ +  Use Nutch as crawler.
+ +  Configure it to use several machines simultaneously for crawling.
+ +  Configure HDFS as filesystem. 
+ +  Use ElasticSearch for storage and indexing.
 
 And this is what I got after a week of work (15 hours):
 
-<img style="display:block;margin:auto" src="{{ site.baseurl }}pics/2016-06-26/system_diagram.png" alt=""/>
+![System diagram](./system_diagram.png)
 
 +  Three Amazon EC2 t2.micro instances running Hadoop 2.6.4: one as master and two worker nodes.
 +  Apache Nutch 1.12 successfully running on top of the Hadoop cluster.
@@ -89,7 +90,8 @@ hdfs dfs -put hello_world.txt /helloWorld_input/hello_world.txt
 ```
 hadoop jar $HADOOP_HOME/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.6.4.jar wordcount /hello_world_in /hello_world_out
 ```
-``
+
+```
 hdfs dfs -cat /hello_world_out/part*
 ```
 
@@ -121,7 +123,7 @@ world    1
 ```
 $NUTCH_HOME/runtime/deploy/bin /urls /crawlOutput $rounds
 ```
-where `$rounds is the number of rounds you want the crawler to run for.
+where `$rounds` is the number of rounds you want the crawler to run for.
 
 ###1.3. Elasticsearch
 
@@ -240,28 +242,27 @@ The following comments are related to the respective steps of the mini-guide on 
 14- For some unknown reason, the "automatic cluster discovery" of elasticsearch did not work for slave1 to automatically join master. Forcing unicast discovery did the trick.
 
 #4. References
-<div>
+
 [1] <a href=http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html>http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html</a><br>
 [2] <a href=https://aws.amazon.com/es/free>https://aws.amazon.com/es/free</a><br>
 [3] <a href=http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz>http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz</a><br>
 [4] <a href=https://gist.github.com/Mario-LopezTelecom/84a191bf76550ec1846d34b8e6d53595>https://gist.github.com/Mario-LopezTelecom/84a191bf76550ec1846d34b8e6d53595</a><br>
 [5] <a href=http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html>http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterSetup.html</a><br>
-[6] <a href=http://www.allprogrammingtutorials.com/tutorials/setting-up-hadoop-2-6-0-cluster.php>http://www.allprogrammingtutorials.com/tutorials/setting-up-hadoop-2-6-0-cluster.php</a><br>  
-[7] <a href=http://arturmkrtchyan.com/how-to-setup-multi-node-hadoop-2-yarn-cluster>http://arturmkrtchyan.com/how-to-setup-multi-node-hadoop-2-yarn-cluster</a><br>  
-[8] <a href=http://stackoverflow.com/questions/29600370/hadoop-2-x-on-amazon-ec2-t2-micro>http://stackoverflow.com/questions/29600370/hadoop-2-x-on-amazon-ec2-t2-micro</a><br>  
-[9] <a href=http://stackoverflow.com/questions/29001702/why-yarn-java-heap-space-memory-error>http://stackoverflow.com/questions/29001702/why-yarn-java-heap-space-memory-error</a><br>  
-[10] <a href=http://hortonworks.com/blog/how-to-plan-and-configure-yarn-in-hdp-2-0/>http://hortonworks.com/blog/how-to-plan-and-configure-yarn-in-hdp-2-0</a><br>  
-[11] <a href=http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-common/yarn-default.xml>http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-common/yarn-default.xml</a><br>  
-[12] <a href=http://stackoverflow.com/questions/34467308/mapreduce-job-hangs-waiting-for-am-container-to-be-allocated>http://stackoverflow.com/questions/34467308/mapreduce-job-hangs-waiting-for-am-container-to-be-allocated</a><br>  
+[6] <a href=http://www.allprogrammingtutorials.com/tutorials/setting-up-hadoop-2-6-0-cluster.php>http://www.allprogrammingtutorials.com/tutorials/setting-up-hadoop-2-6-0-cluster.php</a><br>
+[7] <a href=http://arturmkrtchyan.com/how-to-setup-multi-node-hadoop-2-yarn-cluster>http://arturmkrtchyan.com/how-to-setup-multi-node-hadoop-2-yarn-cluster</a><br>
+[8] <a href=http://stackoverflow.com/questions/29600370/hadoop-2-x-on-amazon-ec2-t2-micro>http://stackoverflow.com/questions/29600370/hadoop-2-x-on-amazon-ec2-t2-micro</a><br>
+[9] <a href=http://stackoverflow.com/questions/29001702/why-yarn-java-heap-space-memory-error>http://stackoverflow.com/questions/29001702/why-yarn-java-heap-space-memory-error</a><br>
+[10] <a href=http://hortonworks.com/blog/how-to-plan-and-configure-yarn-in-hdp-2-0/>http://hortonworks.com/blog/how-to-plan-and-configure-yarn-in-hdp-2-0</a><br>
+[11] <a href=http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-common/yarn-default.xml>http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-common/yarn-default.xml</a><br>
+[12] <a href=http://stackoverflow.com/questions/34467308/mapreduce-job-hangs-waiting-for-am-container-to-be-allocated>http://stackoverflow.com/questions/34467308/mapreduce-job-hangs-waiting-for-am-container-to-be-allocated</a><br>
 [13] <a href=https://gist.github.com/Mario-LopezTelecom/84a191bf76550ec1846d34b8e6d53595#file-mapred-site-xml-L41>https://gist.github.com/Mario-LopezTelecom/84a191bf76550ec1846d34b8e6d53595#file-mapred-site-xml-L41</a><br> 
 [14] <a href=http://www.apache.org/dyn/closer.lua/nutch/1.12/apache-nutch-1.12-src.tar.gz>http://www.apache.org/dyn/closer.lua/nutch/1.12/apache-nutch-1.12-src.tar.gz</a><br>
-[15] <a href=https://aws.amazon.com/es/elasticsearch-service/>https://aws.amazon.com/es/elasticsearch-service</a><br>
-[16] <a href=https://forums.aws.amazon.com/thread.jspa?messageID=681938>https://forums.aws.amazon.com/thread.jspa?messageID=681938</a><br>
-[17] <a href=https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.4.1.tar.gz>https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.4.1.tar.gz</a><br>
-[18] <a href=https://www.elastic.co/guide/en/elasticsearch/reference/1.4/_create_an_index.html>https://www.elastic.co/guide/en/elasticsearch/reference/1.4/_create_an_index.html</a><br>
-[19] <a href=https://www.mind-it.info/2013/09/26/integrating-nutch-1-7-elasticsearch/>https://www.mind-it.info/2013/09/26/integrating-nutch-1-7-elasticsearch</a><br>
-[20] <a href=https://wiki.apache.org/nutch/NutchTutorial#Crawl_your_first_website/>https://wiki.apache.org/nutch/NutchTutorial#Crawl_your_first_website</a><br>
-</div>
+[15] <a href=https://aws.amazon.com/es/elasticsearch-service>https://aws.amazon.com/es/elasticsearch-service</a><br>
+[16] <a href="https://forums.aws.amazon.com/thread.jspa?messageID=681938">https://forums.aws.amazon.com/thread.jspa?messageID=681938</a><br>
+[17] https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.4.1.tar.gz <br>
+[18] https://www.elastic.co/guide/en/elasticsearch/reference/1.4/ (Create an index) <br>
+[19] <a href="https://www.mind-it.info/2013/09/26/integrating-nutch-1-7-elasticsearch/">https://www.mind-it.info/2013/09/26/integrating-nutch-1-7-elasticsearch</a><br>
+[20] "https://wiki.apache.org/nutch/NutchTutorial (Crawl your first website)
 
 
 
