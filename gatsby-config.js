@@ -9,7 +9,7 @@ module.exports = {
     siteUrl: url,
     title: 'Dr Mario Blog. A Full Stack Persona',
     subtitle:
-      'Current obsessions: Tech team management & Data Engineering. This may change.',
+      'Current obsessions: managing tech teams & Data Eng. This may change. Today. Several times.',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
@@ -30,7 +30,7 @@ module.exports = {
       name: 'Dr. Mario',
       email: 'mario.lopezmartinez87@gmail.com',
       linkedin: 'mariolopezmartinez',
-      twitter: 'drmario-gh',
+      twitter: 'Dr___Mario',
       github: '#',
       rss: '#',
     },
