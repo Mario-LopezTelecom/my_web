@@ -2,7 +2,7 @@
 layout: post
 title: Range, de David Epstein
 date: "2019-03-16"
-category: "Book"
+category: "Book review"
 description: "Contra la especialización."
 tags:
     - "Career"
