@@ -2,7 +2,7 @@
 layout: post
 title: Acho, ¿qué has estado haciendo estos últimos tres años?
 image: 2016-03-14/traffic.png
-date: "2016-03-14T17:30:21.988Z"
+date: "2016-03-14"
 category: "Rambling"
 description: "Como se habrá enterado hasta mi (esquizofrénica, esquizofrénica, esquizofrénica) vecina de abajo, AL FIN he depositado la tesis."
 tags:

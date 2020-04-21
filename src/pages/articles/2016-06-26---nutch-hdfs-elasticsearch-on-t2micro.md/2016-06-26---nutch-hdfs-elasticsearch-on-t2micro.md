@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Nutch, HDFS, and Elasticsearch on AWS t2.micro instances (Free Tier)
-image: 2016-06-26/system_diagram.png
 date: "2016-06-26T20:00:01.244Z"
 slug: "nutch-hdfs-elasticsearch-on-t2micro"
 category: "Data Eng."
@@ -22,7 +21,7 @@ As an exercise I committed to see how much I could accomplish of the following t
 
 And this is what I got after a week of work (15 hours):
 
-![System diagram](./system_diagram.png)
+![System diagram](diagram.png)
 
 +  Three Amazon EC2 t2.micro instances running Hadoop 2.6.4: one as master and two worker nodes.
 +  Apache Nutch 1.12 successfully running on top of the Hadoop cluster.

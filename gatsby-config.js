@@ -7,7 +7,7 @@ module.exports = {
   siteMetadata: {
     url,
     siteUrl: url,
-    title: 'Dr Mario Blog. A Full Stack Persona',
+    title: 'Dr Mario. A Full Stack Persona',
     subtitle:
       'Current obsessions: managing tech teams & Data Eng. This may change. Today. Several times.',
     copyright: '© All rights reserved.',
@@ -21,14 +21,10 @@ module.exports = {
         label: 'About me',
         path: '/about/',
       },
-      {
-        label: 'Stuff I made',
-        path: '/stuff/',
-      },
     ],
     author: {
       name: 'Dr. Mario',
-      email: 'mario.lopezmartinez87@gmail.com',
+      email: 'hola@drmario.tech',
       linkedin: 'mariolopezmartinez',
       twitter: 'Dr___Mario',
       github: '#',
